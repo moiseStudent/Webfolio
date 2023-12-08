@@ -1,0 +1,48 @@
+/*********************************************************
+*      Hoja de estilos para la seccion de portafolio     * 
+**********************************************************/
+
+
+/* Recursos */
+@import url('../recursos/colors.css');
+@import url('..//recursos/normalize.css');
+@import url('../recursos/colors.css');
+
+/*********************************************************
+*             Targetas - enlaces de los proyectos        * 
+**********************************************************/
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project .django_app {
+    margin: 10px 20px;
+}
+
+.project .django_app {
+    width: 40%;
+    height: 25%;
+    padding: 20px;
+    font-family: 'Victor Mono'; /* Traer desde un servidor */
+    border-radius: 5px;
+    background: #fff;
+}
+
+.project .django_app .project_date {
+    color: #aaa;
+    margin:10px 0px;
+}
+
+@media only screen and (max-width:580px){
+    .project {
+        flex-direction: column;
+    }
+
+    .project .django_app {
+        width: 90%;
+    }
+
+
+}

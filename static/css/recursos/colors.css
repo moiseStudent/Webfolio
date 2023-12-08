@@ -1,0 +1,21 @@
+:root {
+
+    --negro:#000;
+    --blanco:#EFFFFE;
+    --gris:#CCCCCC;
+    --azul:#1B0D3F;
+    --azul_turquesa:#15C1ff;
+    --azul-claro: #4A88F4;
+    --azul-claro-2:#74a7ff;
+    --active-blue: #a0c0f8;
+    --azul-marino:#21014b75;
+    --azul-transparencia: #04012CD5;
+    --naranja: #E95C0BD8;
+    --rojo:#FF0000;
+    --morado:#300544;
+    --degradado-naranja-fondo:rgb(255,0,0);
+    --degradado-naranja:linear-gradient(90deg, rgba(255,0,0,1) 0%,
+     rgba(253,160,29,1) 50%,
+      rgba(252,198,69,1) 100%);
+
+}

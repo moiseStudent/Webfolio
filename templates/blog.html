@@ -1,0 +1,176 @@
+{% extends 'base.html'%}
+
+<!--Titulo de la sección-->
+{% block title %} Articulos {% endblock %}
+
+<!--Contenido de la sección-->
+{% block content%}
+
+    {% include 'menu.html' %}
+
+        <section class="blog">
+            
+            <section class="blog-header">
+
+                <div class="blog-header_btn-container">
+                    <!-- start nav -->
+                    <nav id="menu_blog" class="blog-header_btn-categorias">
+                         <!-- start menu -->
+    
+                    <ul>
+                        <li><a href="#" class="a-categoria">Categorias</a>
+    
+    
+                        <!-- start menu desplegable -->
+                         <ul>
+    
+                            <li><a href="#">Electricidad</a></li>
+                            <li><a href="#">Desarrollo web</a></li>
+                            <li><a href="#">Idiomas</a></li>
+                        </ul>
+                        <!-- end menu desplegable -->
+
+                    </ul>
+    <!-- end menu -->
+    </nav>
+    <!-- end nav -->
+                </div>
+
+                <div class="blog-header_form-search">
+                    <form action="">
+                        <div class="form-search_btn">
+                            <input type="search" placeholder="Buscar">
+                            <img src="{{url_for('static',filename='imagenes/buscar.png')}}" alt="Buscar" onclick="buscar();">
+                        </div>
+                    </form>
+                </div>
+
+            </section>
+
+            <section class="blog-articles">
+
+                <section class="articles-container">
+
+                    <article class="article n1">
+
+                        <!-- Imagen del articulo  -->
+                        <div class="article_img">Miniatura del articulo de html</div>
+                        
+                        <h3>HTML el lenguaje de la web</h3>
+
+                        <p>
+                            "HTML" Lenguaje de marcado de hiper texto...
+                            Te contare un poco sobre este maravilloso mundo
+                        </p>
+
+                        <a href="/autor">Autor: Moises Perez</a>
+                        <i>Fecha: 05 Septiembre, 2023</i>
+
+                        <p><i>Seccion: Desarrollo web</i></p>
+                        <a href="/blog/html_article">Ir al articulo</a>
+                    </article>
+
+                    <article class="article n2">
+
+                        <!-- Imagen del articulo  -->
+                        <div class="article_img">Miniatura del articulo de html</div>
+                        
+                        <h3>HTML5 y sus novedades</h3>
+
+                        <p>
+                            HTML5 es la version mas actual de, de hecho es la version
+                            que se utiliza actualmente.
+                        </p>
+
+                        <a href="/autor">Autor: Moises Perez</a>
+                        <i>Fecha: 05 Septiembre, 2023</i>
+
+                        <p><i>Seccion: Desarrollo web</i></p>
+                        <button>Leer articulo</button>
+                    </article>
+
+                    <article class="article n3">
+
+                        <!-- Imagen del articulo  -->
+                        <div class="article_img">Miniatura del articulo de html</div>
+                        
+                        <h3>Que es CSS</h3>
+
+                        <p>
+                            CSS "Cascading style sheet", hoja de estilo en cascada. Por su 
+                            traduccion al espanol, La forma de darle vida a tus sitios web.
+                        </p>
+
+                        <a href="/autor">Autor: Moises Perez</a>
+                        <i>Fecha: 05 Septiembre, 2023</i>
+
+                        <p><i>Seccion: Desarrollo web</i></p>
+                        <button>Leer articulo</button>
+                    </article>
+
+                    <article class="article n4">
+
+                        <!-- Imagen del articulo  -->
+                        <div class="article_img">Miniatura del articulo de html</div>
+                        
+                        <h3>Que es javascript</h3>
+
+                        <p>
+                            javascript el leguaje de programacion destidano
+                            para el desarrollo de sitios web, aunque hoy en dia
+                            es visto en otras areas.
+                        </p>
+
+                        <a href="/autor">Autor: Moises Perez</a>
+                        <i>Fecha: 05 Septiembre, 2023</i>
+
+                        <p><i>Seccion: Desarrollo web</i></p>
+                        <button>Leer articulo</button>
+                    </article>
+
+                </section>
+
+            </section>
+
+            <!-- Navegacion paginada para la seccion de articulos -->
+            <section class="">1-2-3</section>
+
+            <!-- Footer de articulos -->
+
+            <section class="blog-footer">
+
+                <div class="subscribe-form">
+                    <h3>Suscríbete para Actualizaciones</h3>
+                    <form method="get">
+                        <input type="email" placeholder="Ingresa tu correo">
+                        <button type="submit">Suscribirse</button>
+                    </form>
+                </div>
+
+                <div class="social-widgets">
+
+                    <h3>Síguenos en Redes Sociales</h3>
+
+                    <div class="social-link">
+
+                        <a href="#" class="facebook">
+                            <img src="{{url_for('static',filename='imagenes/facebook.png.png')}}" alt="Facebook">
+                        </a>
+
+                        <a href="#" class="facebook">
+                            <img src="{{url_for('static',filename='imagenes/facebook.png.png')}}" alt="Facebook">
+                        </a>
+
+
+                        <a href="#" class="facebook">
+                            <img src="{{url_for('static',filename='imagenes/facebook.png.png')}}" alt="Facebook">
+                        </a>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+    {% include 'footer.html' %}
+
+{% endblock %}

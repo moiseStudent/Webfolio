@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="programacion,proyectos,software,tecnologia,ingles,electricidad">
+
+        <!-- Estilos -->
+        <link rel="stylesheet" href="{{url_for('static', filename='css/recursos/normalize.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style_base.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+        <!-- Icono -->
+        <link rel="shortcut icon" href="{{url_for('static',filename='imagenes/icono_website.png')}}" type="image/x-icon">
+
+        <!-- Tipografias -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,500&family=Lumanosimo&family=Oswald:wght@500&family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+        <title>{% block title %}{% endblock %} - Webfolio</title>
+
+    </head>
+    <body>
+
+        {% block content %}
+
+            <!-- Bloque de contenido -->
+
+        {% endblock %}
+        
+        <!-- Script -->
+        <script src="{{url_for('static',filename='js/script.js')}}"></script>
+
+    </body>
+</html>

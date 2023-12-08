@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+<!--Titulo de la sección-->
+{% block title %} Contacto {% endblock %}
+
+<!--Contenido de la sección-->
+{% block content %}
+
+    {% include 'menu.html' %}
+
+        <section class="contacto_top">
+
+            <!-- Medios de contacto -->
+
+            <div class="contacto_top-medios_contacto">
+
+                <h1>Medios de contacto</h1>
+
+                <a href="#">Facebook</a>
+                <a href="#">Whatsapp</a>
+                <a href="#">Instagram</a>
+
+            </div>
+
+        </section>
+
+        <section class="contacto_middle">
+            <center style="margin-top: 45%;">----- Foto -----</center>
+        </section>
+
+        <section class="contacto_bottom">
+
+            <div class="contacto_bottom-description">
+                <h2> Descripcion </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, modi.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, modi.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, modi.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, modi.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, modi.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, modi.
+                </p>
+            </div>
+
+            <div class="contacto_bottom-form">
+                <h3>Enviar mensaje</h3>
+                <form action="" method="get">
+                    <label for="name">Ingrese su nombre: </label>
+                    <input type="text" name="name" placeholder="Ingrese su nombre: ">
+
+                    <label for="email">Ingrese su email: </label>
+                    <input type="email" name="email" placeholder="Ingrese su correo: ">
+
+                    <textarea name="mensaje" cols="30" rows="10" maxlength="500"></textarea>
+
+                    <input type="submit" value="Enviar mensaje">
+                </form>
+            </div>
+
+        </section>
+
+    {% include 'footer.html' %}
+
+{% endblock %}
