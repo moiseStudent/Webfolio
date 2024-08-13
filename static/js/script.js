@@ -1,7 +1,6 @@
 /// Alerta de la version pre beta ///
 //alert("Pre Beta");
 console.log('Version Prebeta');
-print("Este sitio web esta en desarrollo");
 
 // Script para abrir y cerrar el botón desplegable del menu en smartphone //
 function open_close_menu(){
@@ -35,12 +34,4 @@ function open_close_menu(){
 
 
 
-}
-
-
-
-
-function buscar(){
-    alert("Buscando el contenido...");
-    console.log("Buscando 'Construir' ");
 }

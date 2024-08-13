@@ -1,0 +1,77 @@
+/*********************************************************
+*                           Targetas                     *
+**********************************************************/
+.cards {
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 50px;
+
+}
+
+.cards .article h2{
+    font-family: 'Oswald', sans-serif;
+    margin: 10px;
+    text-align: center;
+}
+
+.cards .article {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 1em;
+    box-shadow: 2px 3px 6px var(--azul_turquesa);
+    border: 2px solid var(--azul_turquesa);
+    border-radius: 7px;
+    padding: 12px;
+    text-align: justify;
+    background-color: var(--blanco);
+    
+}
+
+.cards .article p {
+    margin: .5em 1em;
+    padding: 1em;
+    font-family:'Oswald', sans-serif;
+}
+
+/*********************************************************
+*                Targetas - Imagenes                     *
+**********************************************************/
+
+.cards .img {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+.cards .img img {
+    width: 100px;
+    height: 100px;
+}
+
+/*********************************************************
+*                   Targeta - Button                     *
+**********************************************************/
+
+.cards .btn_cards {
+    margin: 1em;
+    padding: 1em;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: var(--morado);
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    cursor: pointer;
+    background: var(--degradado-naranja-fondo);
+    background: var(--degradado-naranja);
+    
+}
+
+.cards .btn_cards:hover {
+    background: #ff5f4a;
+    transition-property: background;
+    transition-duration: 1s;
+}

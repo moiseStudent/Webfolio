@@ -1,14 +1,18 @@
 @import url('recursos/colors.css');
-@import url('blog/blog.css');
-@import url('portafolio/portafolio.css');
-@import url('contacto/contacto.css');
+@import url('navbar.css');
+@import url('cards.css');
+@import url('about.css');
+@import url('portafolio.css');
+@import url('contact.css');
+@import url('footer.css');
+@import url('responsive.css');
 
 /*********************************************************
 *                       Desktop                          *
 **********************************************************/
 
 body {
-    background-image: url('../imagenes/background.jpg');
+    background-image: url('../img/background.jpg');
     background-color:#051769;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -17,129 +21,25 @@ body {
 
 }
 
-/*********************************************************
-*           Barra de navegacion - Desktop                *
-**********************************************************/
-
-header {
-    width: 100%;
-    display: flex;
-    padding: 20px;
-    justify-content: space-between;
-}
-
-/*********************************************************
-*        Barra de nagevacion - Nombre del sitio web      *
-**********************************************************/
-
-.web_name{
-    width: 13.6%;
-    margin-right: 1.5em;
-}
-
-.web_name p{
-    color: var(--naranja);
-    font-weight: 600;
-    font-size: 1.8em;
-    font-family: 'Oswald', sans-serif;
-}
-
-/*********************************************************
-*      Barra de navegacion - Boton de menu               *
-**********************************************************/
-
-.btn_menu {
-    display: none;
-}
-.btn_close_menu {
-    display: none;
-}
-
-/*********************************************************
-*              Barra de navegacion - Menu                *
-**********************************************************/
-
-header .menu {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-
-/*********************************************************
-*       Barra de navegacion - Estilos de listas          *
-**********************************************************/
-
-.menu ul li {
-    list-style: none;
-    display: inline-block;
-}
-
-.menu ul li a {
-    padding: 10px;
-    margin: .5em 1em;
-    text-decoration: none;
-    color: var(--blanco);
-    font-size: 1.8em;
-    font-family: 'Oswald', sans-serif;
-    
-}
-
-
-.menu ul li a:hover{
-    border-bottom: 2px solid var(--naranja);
-}
-
-.menu ul li a:active {
-    background: var(--azul_marino);
-}
-
-/*********************************************************
-*         Barra de navegacion - Redes sociales           *
-**********************************************************/
-
-.menu .redes_sociales a {
-    margin: .4em;
-    text-decoration: none;
-}
-
-.menu .redes_sociales  a:hover {
-    border-bottom: .15em solid var(--naranja);
-}
-
-
-.menu .redes_sociales a img:hover {
-    
-    rotate:y 360deg;
-    transition-property: rotate;
-    transition-duration: .8s;
-}
 
 /*********************************************************
 *             Presentacion del sitio web                 *
 **********************************************************/
-
-.presentacion {
-    display: flex;
-    flex-direction: column;
+.my-description{
     text-align: center;
-    margin-left: 3em;
-    margin-top: 3rem;
-    padding: 16px;
-    position: block;
-    width: 60vw;
+    padding: 15px;
+    width: 30vw;
 }
 
-.presentacion h2 {
+.my-description h2 {
     margin-bottom: .7em;
     font-family: 'Oswald', sans-serif;
     color: var(--blanco);
     font-size: 4em;
 }
 
-.presentacion p {
-    text-align: center;
+.my-description p {
+    text-align: justify;
     font-family:'Oswald', sans-serif;
     color: #fff;
     font-size: 25px;
@@ -149,8 +49,8 @@ header .menu {
 *             Presentacion - boton "Leer Mas"            *
 **********************************************************/
 
-.presentacion .presentacion_btn_info {
-    margin-top: 1em;
+.my-description .presentacion_btn_info {
+    margin-top: 3em;
     margin-left: 0px;
     padding: 10px;
     width: 14vw;
@@ -159,8 +59,6 @@ header .menu {
     font-family: 'Oswald',sans-serif;
     font-size: 1.4em;
     color: var(--blanco);
-   /* border-top-left-radius: 1.5rem;
-    border-bottom-right-radius: 1.5rem;*/
     border-radius: .4em;
     background: var(--degradado-naranja-fondo);
     background: var(--degradado-naranja);
@@ -168,8 +66,7 @@ header .menu {
     text-decoration: none;
 }
 
-
-.presentacion .presentacion_btn_info:hover {
+.presentacion_btn_info:hover {
     background: #eb461d;
     transition-property: background;
     transition-duration: .5s;
@@ -179,143 +76,78 @@ header .menu {
     background: #ff613a;
 }   
 
+
 /*********************************************************
-*                           Targetas                     *
+*                       Presentation                     *
 **********************************************************/
-.cards {
+
+.start{
+    color:#fff;
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url(../img/fondo.jpg);
+    background-size: cover;
+    height: 100vh;
+    align-content: space-between;
+    color: #fff;
     display: flex;
-    padding: 1em;
-    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.start .banner-container{
     width: 100%;
-    margin-bottom: 50px;
-
-}
-
-.cards .article h2{
-    font-family: 'Oswald', sans-serif;
-    margin: 10px;
-    text-align: center;
-}
-
-.cards .article {
-    display: flex;
-    flex-direction: column;
-    margin: 0px 1em;
-    box-shadow: 2px 3px 6px var(--azul_turquesa);
-    border: 2px solid var(--azul_turquesa);
-    border-radius: 7px;
-    padding: 12px;
-    text-align: justify;
-    background-color: var(--blanco);
-    
-}
-
-.cards .article p {
-    margin: .5em 1em;
-    padding: 1em;
-    font-family:'Oswald', sans-serif;
-}
-
-/*********************************************************
-*                Targetas - Imagenes                     *
-**********************************************************/
-
-.cards .img {
-    width: 100px;
-    height: 100px;
+    padding: 20px;
+    background-color: #1e2326f8;/*#1e2326*/
+    max-width: 360px;
     margin: auto;
-}
-
-.cards .img img {
-    width: 100px;
-    height: 100px;
-}
-
-/*********************************************************
-*                   Targeta - Button                     *
-**********************************************************/
-
-.cards .btn_cards {
-    margin: 1em;
-    padding: 1em;
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    color: var(--morado);
-    text-decoration: none;
+    /*margin-left: 50%;*/
     text-align: center;
-    font-family: 'Oswald', sans-serif;
-    cursor: pointer;
-    background: var(--degradado-naranja-fondo);
-    background: var(--degradado-naranja);
-    
+    border-radius: 40px;
 }
-
-.cards .btn_cards:hover {
-    background: #ff5f4a;
-    transition-property: background;
-    transition-duration: 1s;
+.start .banner-container img{
+    margin-top: 40px;
+    border: 10px solid var(--verde);
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 100%;
 }
-
-/*********************************************************
-*                    Pie de pagina                       *
-**********************************************************/
-
-footer {
-    position: absolute;
-    border-top: 6px solid var(--negro);
+.start .banner-container h1{
+    margin-top: 40px;
+    font-size: 42px;
+    font-family: 'Righteous';
 }
-
-footer a{
-    font-family: 'Oswald', sans-serif;
-    font-size:2em;
-    color: var(--blanco);
+.start .banner-container h2{
+    font-size: 15px;
+    font-weight: normal;
+}
+.start .banner-container .social-media a{
+    color: #fff;
+    display: inline-block;
     text-decoration: none;
-    margin: 0px .5rem;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+.start .banner-container .social-media a:hover{
+    background-color: var(--verde);
 }
 
-footer a:hover {
-    border-bottom: 3px solid var(--naranja);
-    text-shadow: .5px 1px 3px #ccc;
-}
 
-footer p {
-    margin: 1.5em 0px;
-    font-family:'Oswald', sans-serif;
-    font-size: 1em;
-    line-height: 1.5;
-}
 
-/*********************************************************
-*              Pie de pagina - Legales                   *
-**********************************************************/
 
-.legal .legales {
-    font-size: 1em;
-    margin: 7px;
-    color: var(--gris);
-}
 
-.legal .legales:hover {
-    color: var(--blanco);
-}
 
-.footer_footer {
-    background: var(--gris);
-    width: 100%;
-    height: 2em;
-}
 
-.pie_position {
-    display: flex;
-    background: var(--azul);
-    width: 100%;
-}
 
-footer section {
-    color: var(--blanco);
-    padding: 2em;
-}
+
+
+
+
 
 /*
     Se requiere modificacion para arreglar los errores de
@@ -323,167 +155,3 @@ footer section {
     fecha: 16 de octubre del 2023. 
 */
 
-
-@media only screen and (max-width:1200px){
-
-    /* Ajuste de los errores del desing del menu */
-    .menu ul li a {
-        padding: 7px;
-        margin: .5em 1em;
-        font-size: 1em;
-        
-    }
-
-}
-
-/*********************************************************
-*             Estilos para Monitores pequeños            *
-**********************************************************/
-
-@media only screen and (max-width:1000px){
-    /**/
-    .btn_close_menu {
-        display: block;
-    }
-
-    header #menu {
-        display: none;
-    }
-
-    body {
-        background-repeat: repeat;
-    }
-
-    .btn_close_menu {
-        position: absolute;
-        color: var(--blanco);
-        top: 0;
-        right: 0;
-        font-size: 30px;
-        margin: 1rem;
-        padding: .30em;
-
-    }
-    
-    .btn_close_menu:hover {
-        background: var(--morado);
-    }
-
-
-    .btn_menu {
-        display: block;
-        cursor: pointer;
-        padding: .60em;
-    }
-    .btn_menu:hover {
-        background: #1b0d3f8e;
-    }
-    .btn_menu:active {
-        background: #0e0427b0;
-    }
-
-    header {
-        width: 100%;
-    }
-
-    header .menu {
-        position: absolute;
-        width: 60%;
-        height: 100%;
-        flex-direction: column;
-        background: var(--azul-transparencia);
-        top: 0;
-        left:0;
-    }
-
-
-    header .menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    header ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    header ul li {
-        margin: 1.5rem 0rem;
-    }
-}
-
-
-/*********************************************************
-*                Estilos para Tablets            *
-**********************************************************/
-
-@media only screen and (max-width:936px){
-
-    body {
-        background-image: url("../imagenes/fondo_movil_prueba.png");
-        background-attachment: fixed;
-        height: 100%;
-        background-position: top;
-    }
-
-    .presentacion {
-        width: 85%;
-    }
-
-    .presentacion .presentacion_btn_info {
-        width: 30vw;
-    }
-
-    .cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cards .article{
-        margin: 3em 0em;
-        width: 70%;
-        height: 55%;
-    }
-
-
-    footer .pie_position {
-        flex-direction: column;
-    }
-
-}
-
-/*********************************************************
-*                  Estilos para Smartphone               *
-**********************************************************/
-
-@media only screen and (max-width:580px){
-
-    body {
-        background-repeat: repeat-y;   
-    }
-
-    header .menu {
-        width: 100%;
-    }
-
-    .presentacion {
-        width: 100vw;
-        text-align: center;
-        margin: 0;
-    }
-
-    .presentacion .presentacion_btn_info {
-        width: 55%;
-        margin-top: 1.4em;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 0;
-    }
-
-    .cards .article {
-        width: 90vw;
-    }
-
-}

@@ -1,0 +1,94 @@
+/*********************************************************
+*                       Navbar - Desktop                 *
+**********************************************************/
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #1b0d3f;
+}
+
+header .navbar nav {
+    display: flex;
+    flex-direction: column;
+}
+
+/*********************************************************
+*        Barra de nagevacion - Nombre del sitio web      *
+**********************************************************/
+
+.web_name h3{
+
+}
+
+/*********************************************************
+*      Barra de navegacion - Boton de menu               *
+**********************************************************/
+
+.btn_menu {
+    display: none;
+}
+.btn_close_menu {
+    display: none;
+}
+
+/*********************************************************
+*              Barra de navegacion - Menu                *
+**********************************************************/
+
+header .menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/*********************************************************
+*       Barra de navegacion - Estilos de listas          *
+**********************************************************/
+
+.menu ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: var(--blanco);
+    
+    font-family: 'Oswald', sans-serif;
+    
+}
+
+
+.menu ul li a:hover{
+    border-bottom: 2px solid var(--naranja);
+}
+
+.menu ul li a:active {
+    background: var(--azul_marino);
+}
+
+/*********************************************************
+*         Barra de navegacion - Redes sociales           *
+**********************************************************/
+
+.menu .redes_sociales a {
+    text-decoration: none;
+}
+
+.menu .redes_sociales  a:hover {
+    border-bottom: .15em solid var(--naranja);
+}
+
+
+.menu .redes_sociales a img:hover {
+    
+    rotate:y 360deg;
+    transition-property: rotate;
+    transition-duration: .8s;
+}
+
+

@@ -1,0 +1,101 @@
+footer{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .redes{
+    margin-bottom: 20px;
+}
+footer .redes a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #1CB698;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+
+
+
+/*********************************************************
+*                    Pie de pagina                       *
+**********************************************************/
+
+footer {
+    position: absolute;
+    border-top: 6px solid var(--negro);
+}
+
+footer a{
+    font-family: 'Oswald', sans-serif;
+    font-size:2em;
+    color: var(--blanco);
+    text-decoration: none;
+    margin: 0px .5rem;
+}
+
+footer a:hover {
+    border-bottom: 3px solid var(--naranja);
+    text-shadow: .5px 1px 3px #ccc;
+}
+
+footer p {
+    margin: 1.5em 0px;
+    font-family:'Oswald', sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/*********************************************************
+*              Pie de pagina - Legales                   *
+**********************************************************/
+
+.legal .legales {
+    font-size: 1em;
+    margin: 7px;
+    color: var(--gris);
+}
+
+.legal .legales:hover {
+    color: var(--blanco);
+}
+
+.footer_footer {
+    background: var(--gris);
+    width: 100%;
+    height: 2em;
+}
+
+.pie_position {
+    display: flex;
+    background: #000;
+    width: 100%;
+}
+
+footer section {
+    color: var(--blanco);
+    padding: 2em;
+}

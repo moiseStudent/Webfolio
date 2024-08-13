@@ -1,82 +1,62 @@
 {% extends 'base.html' %}
 
-<!--Titulo de la sección-->
+<!-- Seccion Title-->
 {% block title %} Home {% endblock %}
 
-<!-- Contenido de la sección-->
 {% block content%}
 
-    <!--Barra de navegacion-->
-    {% include 'menu.html' %}
+    <!-- navbar -->
+    {% include 'navbar.html' %}
 
-    
+    <!-- Start section -->
     <section class="presentacion">
 
-        <h2>Student FullStack</h2>
+        <div class="start" id="start">
+            <div class="banner-container">
 
-        <p class="presentacion_texto">
+                <div class="container-img">
+                    <img src="../static/img/profile.png" alt="profile">
+                </div>
 
-            ¡Hola!, bienvenido/a. Soy Moisés Pérez, un estudiante de electricidad y un entusiasta autodidacta de la programación. 
-        </p>
+                <h1>Moises Perez</h1>
+                <h2>Tecnico Medio en electricidad</h2>
 
-        <a href="/autor" class="presentacion_btn_info">Leer más</a>
+                <div class="social-media">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+
+
+            <div class="my-description">
+                    <h2>Web Developert</h2>
+    
+                    <p class="presentacion_texto">
+            
+                        ¡Hola!, bienvenido/a. Soy Moisés Pérez, un estudiante de electricidad y un entusiasta autodidacta de la programación. 
+                    </p>
+
+          
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
 
     </section>
 
-        <section class="cards">
-
-            <div class="first_card article">
-
-                <div class="img">
-                    <img src="{{url_for('static',filename='imagenes/desarrollo-web.png')}}" alt="desarrollo-web">
-                </div>
-
-                <h2>Desarrollo web</h2>
-
-                <p> 
-                    En esta sección, podrás explorar mi pasión por la creación de 
-                    aplicaciones y sitios web. Aquí encontrarás un conjunto de proyectos 
-                    que reflejan mi dedicación como desarrollador.
-                </p>   
-                <a href="/portafolio/desarrollo_web" class="btn_cards">Ir a la sección</a>           
-            </div>
-
-            <div class="secund_card article">
-
-                <div class="img">
-                    <img src="{{url_for('static',filename='imagenes/Habilidades.png')}}" alt="Habilidades">
-                </div>
-
-                <h2>Habilidades Técnicas</h2>
-
-                <p> 
-                    Conoce más sobre mis habilidades técnicas y competencias en diversos
-                    campos. Aquí encontrarás un resumen de las herramientas y tecnologías
-                    que he dominado durante mi trayectoria académica.
-                </p>
-                <a href="/autor/habilidades_tecnicas" class="btn_cards">Ir a la sección</a>
-            </div>
-
-            <div class="tercera_card article">
-                
-                <div class="img">
-                    <img src="{{url_for('static',filename='imagenes/rompecabezas.png')}}" alt="Proyectos">
-                </div>
-
-                <h2>Proyectos</h2>
-
-                <p> 
-                    En esta sección, podrás sumergirte en una variedad de trabajos que 
-                    he realizado. Cada pieza fue creada con cuidado y dedicación, y 
-                    refleja mi compromiso con el aprendizaje continuo y el crecimiento
-                    profesional.
-                </p>
-
-               <a href="/portafolio/proyectos" class="btn_cards">Ir a Proyectos</a>
-            </div>
-
-        </section>
-
-        {% include 'footer.html' %}
+    <!-- Imports -->
+    {% include 'about.html' %}
+    {% include 'portafolio.html' %}
+    {% include 'contact.html' %}
+    <!--{% include 'cards.html' %}-->
+    {% include 'footer.html' %}
 
 {% endblock %}

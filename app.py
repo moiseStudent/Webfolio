@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask,render_template, send_file
 # import auth,login
 
 app = Flask(__name__)
@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 ### Ruta principal ( Index )
 @app.route('/')
+@app.route('/homepage')
 def index():
     return render_template('index.html')
 
@@ -61,6 +62,13 @@ def autor():
 @app.route('/autor/habilidades_tecnicas')
 def habilidades_tecnicas():
     return render_template('autor.html')
+
+
+### Descargar CV ###
+@app.route('/download')
+def download():
+    path_file = 'documents/CV.pdf'
+    return send_file(path_file, as_attachment=True)
 
 
 

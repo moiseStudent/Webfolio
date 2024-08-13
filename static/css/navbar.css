@@ -1,0 +1,60 @@
+header {
+    width: 100%;
+    background: #033b11a9;
+    color:#fff;
+}
+
+header nav {
+    display: flex;
+    width:100%;
+    align-items: center; /* Centrar contenido en el eje secundario */
+}
+
+header nav div {
+    margin: 4px 10px;
+}
+
+/* Website name  */
+header nav .website-name h3{
+    color: #a52a2a;
+    font-weight: 600;
+    font-size: 1.8em;
+    font-family: 'Oswald', sans-serif;
+}
+
+header nav .navegation {
+    width: 100%;
+    margin-left:10rem;
+}
+
+header nav .navegation ul {
+    list-style: none;
+}
+
+header nav .navegation ul li {
+    display: inline-block;
+}
+
+
+header nav ul li a {
+    display: inline-block;
+    color:#fff;
+    padding: 15px 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+header nav ul li a:hover {
+    border-bottom: 3px solid #a52a2a;
+}
+
+
+
+/* Social media */
+header nav .social-media ul {
+    list-style: none;
+}
+
+header nav .social-media ul li{
+    display: inline-block;
+}
