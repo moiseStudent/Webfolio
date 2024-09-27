@@ -1,0 +1,117 @@
+/* Main container */
+.start {
+    display: flex;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    align-content: space-between;
+    color: var(--white);
+    align-items: center;
+    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)),
+        url(../img/fondo.jpg);
+    background-size: 100vw;
+    background-position: center;
+}
+
+/* Banner Section */
+.banner-container {
+    width: 40%;
+    padding: 20px;
+    background-color: #1e2326f8;
+    max-width: 360px;
+    margin: auto 2rem;
+    text-align: center;
+    border-radius: 40px;
+    border: 1px solid var(--white);
+    z-index: 100;
+}
+
+.start .banner-container img {
+    display: block;
+    width: 80%;
+    height: 10%;
+    margin: auto;
+    border-radius: 30%;
+}
+
+.start .banner-container h1 {
+    margin-top: 40px;
+    font-size: 42px;
+    font-family: "Playfair Display", serif;
+}
+
+.start .banner-container h2 {
+    font-size: 15px;
+    font-weight: normal;
+    color: var(--white);
+}
+
+.start .banner-container .social-media a {
+    color: var(--white);
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid var(--white);
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 20px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.start .banner-container .social-media a:hover {
+    background-color: var(--cardinal-ruby);
+}
+
+
+/* Description container */
+.description-container {
+    width: 60%;
+    max-width: 1200px;
+    margin: auto 1rem;
+}
+
+.description-container p {
+    font-family: 'Open Sans';
+}
+
+.description-container h2 {
+    font-size: 35px;
+    color: var(--white);
+}
+
+.description-container span {
+    color: var(--cardinal-ruby);
+    text-shadow: 1px 1px 0px #ccc;
+}
+
+.description-container p {
+    width: 80%;
+    font-size: 20px;
+    justify-content: justify;
+}
+
+
+@media only screen and (max-width:690px) {
+
+    .start {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+@media only screen and (max-width:580px) {
+
+
+    .banner-container,
+    .description-container {
+        width: 90%;
+    }
+
+    .description-container .flex a {
+        margin-bottom: 20px;
+    }
+}

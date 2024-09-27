@@ -1,62 +1,19 @@
 {% extends 'base.html' %}
 
-<!-- Seccion Title-->
-{% block title %} Home {% endblock %}
+<!-- Title -->
+{% block title %}Home{% endblock %}
 
-{% block content%}
+{% block content %}
 
-    <!-- navbar -->
+<section class="flex flex-col min-h-screen">
+
     {% include 'navbar.html' %}
-
-    <!-- Start section -->
-    <section class="presentacion">
-
-        <div class="start" id="start">
-            <div class="banner-container">
-
-                <div class="container-img">
-                    <img src="../static/img/profile.png" alt="profile">
-                </div>
-
-                <h1>Moises Perez</h1>
-                <h2>Tecnico Medio en electricidad</h2>
-
-                <div class="social-media">
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fa-brands fa-github"></i></a>
-                </div>
-            </div>
-
-
-            <div class="my-description">
-                    <h2>Web Developert</h2>
-    
-                    <p class="presentacion_texto">
-            
-                        ¡Hola!, bienvenido/a. Soy Moisés Pérez, un estudiante de electricidad y un entusiasta autodidacta de la programación. 
-                    </p>
-
-          
-            </div>
-
-
-
-        </div>
-
-
-
-
-
-
-
-    </section>
-
-    <!-- Imports -->
+    {% include 'presentation.html' %}
     {% include 'about.html' %}
     {% include 'portafolio.html' %}
     {% include 'contact.html' %}
-    <!--{% include 'cards.html' %}-->
     {% include 'footer.html' %}
+
+</section>
 
 {% endblock %}

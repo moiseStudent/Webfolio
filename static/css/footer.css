@@ -45,7 +45,9 @@ footer .arriba{
 **********************************************************/
 
 footer {
-    position: absolute;
+    /*position: absolute;*/
+    bottom: 0px;
+    top: 100%;
     border-top: 6px solid var(--negro);
 }
 

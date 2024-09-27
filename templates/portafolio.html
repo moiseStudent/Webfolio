@@ -1,76 +1,28 @@
- <!-- Section Portafolio -->
- <section id="portfolio" class="portfolio">
-     <div class="contenido-seccion">
-         <h2>PORTFOLIO</h2>
-         <div class="galeria">
+<section id="portfolio" class="portfolio-section">
+    <div class="container">
+        <h2>Mis Proyectos</h2>
+        <div class="category-filter">
+            <button class="active" data-category="all"> Todos</button>
+            <button data-category="web"> <i class="fa fa-globe"></i> Web</button>
+            <button data-category="mobile"><i class="fa fa-user-secret"></i> Hacking</button>
+            <button data-category="desktop"><i class="fa fa-desktop"></i> Escritorio</button>
+            <button data-category="desktop"><i class="fa fa-terminal"></i> CLI</button>
 
-            <!-- Tiny task -->
-             <div class="proyecto">
-                 <a href="https://github.com/moiseStudent/tinytasks" target="_black">
-                     <img src="../static/img/p1.png" alt="">
-                     <div class="overlay">
-                         <h3>Tiny Task</h3>
-                         <p>App de gestion de tareas</p>
-                     </div>
+        </div>
+        <div class="portfolio-grid">
+            <!-- Los elementos del portafolio se generarán dinámicamente con JavaScript -->
+        </div>
+        <div class="pagination">
+            <!-- Los botones de paginación se generarán dinámicamente con JavaScript -->
+        </div>
+    </div>
+</section>
 
-                 </a>
-
-             </div>
-
-             <!-- Wissen blog -->
-             <div class="proyecto">
-                 <a href="#">
-                     <img src="../static/img/blog.png" alt="">
-                     <div class="overlay">
-                         <h3>Blog Wissen</h3>
-                         <p>Blog hecho con python y flask</p>
-                     </div>
-
-                 </a>
-
-             </div>
+<section id="portfolio-section">
+    <!-- Aquí se insertarán los proyectos -->
+</section>
 
 
 
-
-
-
-
-
-
-
-
-             <div class="proyecto">
-                 <img src="../static/img/p3.jpg" alt="">
-                 <div class="overlay">
-                     <h3>Diseño Creativo</h3>
-                     <p>Fotografía</p>
-                 </div>
-             </div>
-
-             <!-- 
-             <div class="proyecto">
-                 <img src="../static/img/p4.jpg" alt="">
-                 <div class="overlay">
-                     <h3>Diseño Creativo</h3>
-                     <p>Fotografía</p>
-                 </div>
-             </div>
-             <div class="proyecto">
-                 <img src="../static/img/p5.jpg" alt="">
-                 <div class="overlay">
-                     <h3>Diseño Creativo</h3>
-                     <p>Fotografía</p>
-                 </div>
-             </div>
-             <div class="proyecto">
-                 <img src="../static/img/p6.jpg" alt="">
-                 <div class="overlay">
-                     <h3>Diseño Creativo</h3>
-                     <p>Fotografía</p>
-                 </div>
-             </div>
-             -->
-         </div>
-     </div>
- </section>
+<!-- Api fetch -->
+<script src="{{url_for('static', filename='js/API.js')}}"></script>

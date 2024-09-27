@@ -1,127 +1,77 @@
 <header>
-    <nav>
-        <!-- Website name-->
-        <div class="website-name">
-            <h3>Webfolio</h3>
-        </div>
+    <div class="container flex items-center justify-between">
 
-        <!-- Website Navegation -->
-        <div class="navegation">
+        <a href="#" class="logo">
+
+            <!-- remplace by icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="4 17 10 11 4 5" />
+                <line x1="12" x2="20" y1="19" y2="19" />
+            </svg>
+
+            <span>Moises Dev</span>
+        </a>
+
+        <nav class="desktop-nav">
             <ul>
-                <li>
-                    <a href="#">
-                        <img src="../static/imagenes/home_blanco.png" alt="Home">
-                        Inicio
-                    </a>
-                </li>
+                <li><a href="#home">
+                        <i class="fa fa-home"></i> Home</a></li>
 
-                <li>
-                    <a href="#sobremi">
-                        <img src="../static/imagenes/autor.png" alt="about">
-                        sobre mi
-                    </a>
-                </li>
+                <li><a href="#about">
+                        <i class="fa fa-user"></i> About</a></li>
 
-                <li>
-                    <a href="/download">
-                        <img src="../static/imagenes/blog_blanco_32px.png" alt="Curriculum">
-                        curriculum
-                    </a>
-                </li>
-                <li>
-                    <a href="#portfolio">
-                        <img src="../static/imagenes/portafolio_blanco.png" alt="Portafolio">
-                        Portafolio
-                    </a>
-                </li>
-                <li>
-                    <a href="#contacto">
-                        <img src="../static/imagenes/telefono.png" alt="Contacto">
-                        contacto
-                    </a>
-                </li>
+                <li><a href="#portfolio">
+                        <i class="fa fa-briefcase"></i> Portfolio</a></li>
+
+                <li><a href="#contact">
+                        <i class="fa fa-envelope"></i> Contact</a></li>
+
+                <li><a href="/download" class="btn btn-outline btn-download_cv">
+                        <i class="fa fa-download"></i> Download CV</a></li>
             </ul>
-        </div>
-
-    </nav>
-</header>
-
-
-
-<!----
-<header>
-     Website name --
-    <div class="web-name">
-        <h3>WEBFOLIO</h3>
-    </div>
-
-    <!-Website navbar --
-    <div class="navbar">
-        <nav>
-            <ul>
-                <li>
-                    <a href="/">
-                        <img src="../static/imagenes/home_blanco.png" alt="Home">
-                        Inicio
-                    </a>
-                </li>
-
-                <li>
-                    <a href="/blog">
-                        <img src="{{url_for('static',filename='imagenes/blog_blanco_32px.png')}}" alt="about">
-                        Sobre mi
-                    </a>
-                </li>
-
-                <li>
-                    <a href="/blog">
-                        <img src="{{url_for('static',filename='imagenes/blog_blanco_32px.png')}}" alt="curriculum">
-                        Curriculum
-                    </a>
-                </li>
-
-                <li>
-                    <a href="/portafolio">
-                        <img src="{{url_for('static',filename='imagenes/portafolio_blanco.png')}}" alt="Portafolio">
-                        Portafolio
-                    </a>
-                </li>
-
-                <li class="contacto">
-                    <a href="/contacto">
-                        <img src="{{url_for('static',filename='imagenes/telefono.png')}}" alt="Contact">
-                        Contactar
-                    </a>
-                </li>
-            </ul>
-
         </nav>
-    </div>
 
-    <div class="redes_sociales">
 
-        <a href="https://facebook.com" target="_blank">
-            <img src="{{url_for('static',filename='imagenes/facebook.png.png')}}" alt="Facebook">
-        </a>
 
-        <a href="https://instagram.com" target="_blank">
-            <img src="{{url_for('static',filename='imagenes/instagram.png')}}" alt="Instagram">
-        </a>
+        <button id="openMenu" class="menu-button" aria-label="Toggle navigation menu">
+            <i class="fa fa-bars"></i>
+        </button>
 
-        <a href="https://twitter.com" target="_blank">
-            <img src="{{url_for('static',filename='imagenes/twitter.png')}}" alt="Twitter">
-        </a>
+        <button id="closeMenu" class="menu-button_close menu-button" style="display:none;">
+            <i class="fa fa-times"></i>
+        </button>
+
+
+
     </div>
 </header>
 
-    <- Boton de cerrar --
-    <div class="btn_close_menu" onclick="open_close_menu()">
-        <img src="{{url_for('static',filename='imagenes/cerrar.png')}}" alt="Close">
-    </div>
 
-    <div class="btn_menu" id="btn_menu" onclick="open_close_menu()">
-        <img src="{{url_for('static',filename='imagenes/menu.png')}}" alt="Menu">
 
-    </div>
-->>
--->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const openMenuButton = document.getElementById('openMenu');
+        const closeMenuButton = document.getElementById('closeMenu');
+        const desktopNav = document.querySelector('.desktop-nav');
+
+        openMenuButton.addEventListener('click', function () {
+            // Mostrar el menú
+            desktopNav.classList.add('active');
+
+            // Ocultar el botón de abrir y mostrar el botón de cerrar
+            openMenuButton.style.display = 'none';
+            closeMenuButton.style.display = 'block';
+        });
+
+        closeMenuButton.addEventListener('click', function () {
+            // Ocultar el menú
+            desktopNav.classList.remove('active');
+
+            // Mostrar el botón de abrir y ocultar el botón de cerrar
+            openMenuButton.style.display = 'block';
+            closeMenuButton.style.display = 'none';
+        });
+    });
+</script>

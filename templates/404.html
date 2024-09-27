@@ -1,1 +1,139 @@
-Error
+{% extends 'base.html' %}
+
+<!-- Title -->
+{% block title %}
+    no found
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+    {% include 'navbar.html' %}
+    <h2>Seccion no encontrada</h2>
+
+
+        <title>Guía de Diseño para Portafolio</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                background: #fff !important;
+            }
+            h1, h2 {
+                color: #8B0000;
+            }
+            .color-sample {
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+                border: 1px solid #333;
+            }
+            .color-info {
+                display: inline-block;
+                vertical-align: top;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Guía de Diseño para Portafolio</h1>
+    
+        <h2>Paleta de Colores</h2>
+    
+        <div>
+            <div class="color-sample" style="background-color: #FFFFFF;"></div>
+            <div class="color-info">
+                <strong>Blanco Puro (#FFFFFF)</strong>
+                <p>Uso: Fondo principal, áreas de contenido, texto sobre fondos oscuros</p>
+            </div>
+        </div>
+    
+        <div>
+            <div class="color-sample" style="background-color: #F5F5F5;"></div>
+            <div class="color-info">
+                <strong>Blanco Humo (#F5F5F5)</strong>
+                <p>Uso: Fondo alternativo, secciones de contraste suave</p>
+            </div>
+        </div>
+    
+        <div>
+            <div class="color-sample" style="background-color: #333333;"></div>
+            <div class="color-info">
+                <strong>Gris Oscuro (#333333)</strong>
+                <p>Uso: Texto principal, iconos, bordes</p>
+            </div>
+        </div>
+    
+        <div>
+            <div class="color-sample" style="background-color: #8B0000;"></div>
+            <div class="color-info">
+                <strong>Rubí Oscuro (#8B0000)</strong>
+                <p>Uso: Acentos principales, encabezados, botones importantes</p>
+            </div>
+        </div>
+    
+        <div>
+            <div class="color-sample" style="background-color: #C41E3A;"></div>
+            <div class="color-info">
+                <strong>Rubí Cardinal (#C41E3A)</strong>
+                <p>Uso: Acentos secundarios, enlaces, iconos destacados</p>
+            </div>
+        </div>
+    
+        <div>
+            <div class="color-sample" style="background-color: #E0E0E0;"></div>
+            <div class="color-info">
+                <strong>Gris Claro (#E0E0E0)</strong>
+                <p>Uso: Bordes sutiles, separadores, fondo de elementos inactivos</p>
+            </div>
+        </div>
+    
+        <h2>Uso de Colores por Sección</h2>
+        <ul>
+            <li><strong>Navbar:</strong> Fondo #FFFFFF, texto #333333, acentos #8B0000</li>
+            <li><strong>Presentation:</strong> Fondo #F5F5F5, texto #333333, acentos #C41E3A</li>
+            <li><strong>About Me:</strong> Fondo #FFFFFF, texto #333333, títulos #8B0000</li>
+            <li><strong>Portfolio:</strong> Fondo alternando #FFFFFF y #F5F5F5, bordes #E0E0E0, acentos #C41E3A</li>
+            <li><strong>Contact:</strong> Fondo #F5F5F5, texto #333333, botones #8B0000</li>
+            <li><strong>Footer:</strong> Fondo #333333, texto #FFFFFF, enlaces #C41E3A</li>
+        </ul>
+    
+        <h2>Tipografías Recomendadas</h2>
+        <ul>
+            <li><strong>Títulos principales:</strong> 'Playfair Display' - Elegante y con carácter</li>
+            <li><strong>Subtítulos:</strong> 'Montserrat' - Moderna y clara</li>
+            <li><strong>Texto del cuerpo:</strong> 'Open Sans' - Muy legible y versátil</li>
+            <li><strong>Acentos y botones:</strong> 'Roboto' - Limpia y profesional</li>
+        </ul>
+    
+        <h3>Uso de Tipografías</h3>
+        <ul>
+            <li>Usa 'Playfair Display' para los títulos de sección y tu nombre en la presentación</li>
+            <li>Utiliza 'Montserrat' para subtítulos en About Me y encabezados de proyectos</li>
+            <li>Emplea 'Open Sans' para el texto principal en todas las secciones</li>
+            <li>Aplica 'Roboto' en botones, enlaces y pequeños acentos de texto</li>
+        </ul>
+    
+        <h2>Animaciones Sugeridas</h2>
+        <ul>
+            <li><strong>Fade In:</strong> Para la carga inicial de secciones y elementos</li>
+            <li><strong>Slide In:</strong> Para elementos que entran en la pantalla al hacer scroll</li>
+            <li><strong>Hover Effects:</strong> Para botones y elementos interactivos (escala, cambio de color)</li>
+            <li><strong>Parallax Scrolling:</strong> Para la sección de presentación, creando profundidad</li>
+            <li><strong>Typing Effect:</strong> Para presentar dinámicamente tus habilidades o títulos</li>
+            <li><strong>Smooth Scroll:</strong> Para navegación fluida entre secciones</li>
+            <li><strong>Card Flip:</strong> Para revelar más información en proyectos del portafolio</li>
+            <li><strong>Progress Bars:</strong> Para visualizar niveles de habilidades en la sección About Me</li>
+        </ul>
+    
+        <p>Recuerda que las animaciones deben ser sutiles y no distraer del contenido principal. Úsalas para mejorar la experiencia del usuario y guiar su atención, no para sobrecargarlo visualmente.</p>
+  
+
+
+
+
+{% endblock %}

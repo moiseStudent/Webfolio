@@ -1,73 +1,129 @@
-    <!-- Section About me -->
-    <section id="sobremi" class="sobremi">
-        <div class="contenido-seccion">
-            <h2 class="titulo">Sobre Mí</h2>
+<section id="about" class="about-section">
+
+    <div class="container">
+
+
+        <h2 class="fade-in">Acerca de Mí</h2>
+
+        <div class="info-item">
             <p>
+
                 <span>Hola, soy Moises Perez</span> un apasionado estudiante
                 de electricidad y del idioma inglés, actualmente con un nivel B1. Me dedico al
                 aprendizaje autodidacta de programación y disfruto de la lectura y los deportes
                 de contacto como el Taekwondo. Estoy siempre en busca de nuevos conocimientos y habilidades que me
                 ayuden a crecer tanto personal como profesionalmente.
+
             </p>
-
-            <div class="fila">
-                <!-- datos personales -->
-                <div class="col">
-                    <h3>Datos Personales</h3>
-                    <ul>
-                        <li>
-                            <strong>Fecha de nacimiento</strong>
-                            17-07-2007
-                        </li>
-                        <li>
-                            <strong>Teléfono</strong>
-                            +58 412-9739167
-                        </li>
-                        <li>
-                            <strong>Email</strong>
-                            moises.p.student@gmail.com
-                        </li>
-                        <li>
-                            <strong>Dirección</strong>
-                            Valencia, Edo-carabobo, Venezuela
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- intereses -->
-                <div class="col">
-                    <h3>Intereses</h3>
-                    <div class="contenedor-intereses">
-                        <div class="interes">
-                            <i class="fa-solid fa-language"></i>
-                            <span>Ingles</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-laptop"></i>
-                            <span>Programacion</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-person-hiking"></i>
-                            <span>DEPORTE</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-book"></i>
-                            <span>LIBROS</span>
-                        </div>
-
-                        <div class="interes">
-                            <i class="fa-solid fa-chess"></i>
-                            <span>Ajedrez</span>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <button>
-                <a href="/download">
-                    Descargar CV <i class="fa-solid fa-download"></i>
-                </a>
-                <span class="overlay"></span>
-            </button>
         </div>
-    </section>
+
+
+        <div class="info-flex">
+
+            <div class="info-item fade-in">
+                <h3><i class="fas fa-user"></i> Información Personal</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-birthday-cake"></i>
+                        <strong>Nacimiento:</strong> 17 de enero del 2007</li>
+
+                    <li><i class="fas fa-map-marker-alt"></i> <strong>Ubicación:</strong> Venezuela Edo-Carabobo,
+                        Valencia.</li>
+                    <li><i class="fas fa-envelope"></i> <strong>Email:</strong> moises.p.student@gmail.com</li>
+                </ul>
+            </div>
+            <div class="info-item fade-in">
+                <h3><i class="fas fa-graduation-cap"></i> Educación</h3>
+                <p><i class="fas fa-university"></i> Tecnico medio en electricidad, colegio tecnico "Luisa Caceres
+                    de Arismendi"</p>
+            </div>
+            <div class="info-item fade-in tech">
+                <h3><i class="fas fa-laptop-code"></i> Tecnologías</h3>
+                <ul>
+                    <h4>Lenguajes de programación</h4>
+                    <li><i class="fab fa-html5 fa-lg"></i> HTML</li>
+                    <li><i class="fab fa-css3-alt fa-lg"></i> CSS</li>
+                    <li><i class="fab fa-js-square fa-lg"></i> JS</li>
+                    <li><i class="fab fa-python fa-lg"></i> Python</li>
+                    <li><i class="fas fa-database fa-lg"></i> SQL</li>
+
+                    <h4>Frameworks</h4>
+                    <li><i class="fab fa-python fa-lg"></i> Django</li>
+                    <li><i class="fab fa-python fa-lg"></i> Flask</li>
+
+                    <h4>Herramientas</h4>
+                    <li><i class="fab fa-git fa-lg"></i></li>
+                    <li><i class="fab fa-github fa-lg"></i> GitHub</li>
+                    <li><i class="fas fa-terminal fa-lg"></i> Neovim</li>
+                    <li><i class="fas fa-server fa-lg"></i> Nginx</li>
+
+
+
+
+                </ul>
+            </div>
+
+
+            <div class="info-item fade-in interestings">
+                <h3><i class="fas fa-heart"></i> Intereses</h3>
+                <ul>
+
+                    <li><i class="fas fa-shield-alt"></i> Ciberseguridad</li>
+                    <li><i class="fas fa-user-secret"></i> Pruebas de Penetración</li>
+                    <li><i class="fas fa-bug"></i> Hacking Ético</li>
+                    <li><i class="fas fa-cogs"></i> DevOps</li>
+                    <li><i class="fas fa-book"></i> Lectura</li>
+                    <li><i class="fas fa-code"></i> Programación</li>
+                    <li><i class="fas fa-bolt"></i> Electricidad</li>
+                    <li><i class="fas fa-language"></i> Inglés</li>
+                    <li><i class="fas fa-fist-raised"></i> Artes Marciales</li>
+            </div>
+        </div>
+
+
+
+        <div class="download-cv fade-in">
+            <a href="/download" download><i class="fas fa-download"></i> Descargar CV</a>
+        </div>
+
+
+
+
+
+    </div>
+</section>
+
+<script>
+    // JavaScript para animaciones
+    document.addEventListener('DOMContentLoaded', function () {
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        function checkFade() {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+
+                if (elementTop < window.innerHeight && elementBottom > 0) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Verificar en la carga inicial
+        checkFade();
+
+        // Verificar al hacer scroll
+        window.addEventListener('scroll', checkFade);
+
+        // Animación de hover para los elementos info-item
+        const infoItems = document.querySelectorAll('.info-item');
+        infoItems.forEach(item => {
+            item.addEventListener('mouseenter', function () {
+                this.style.transform = 'scale(1.05)';
+            });
+            item.addEventListener('mouseleave', function () {
+                this.style.transform = 'scale(1)';
+            });
+        });
+    });
+</script>

@@ -1,157 +1,122 @@
-@import url('recursos/colors.css');
+@import url('responsive.css');
+@import url('colors.css');
 @import url('navbar.css');
-@import url('cards.css');
-@import url('about.css');
+@import url('presentation.css');
 @import url('portafolio.css');
 @import url('contact.css');
 @import url('footer.css');
-@import url('responsive.css');
+@import url('about.css');
 
-/*********************************************************
-*                       Desktop                          *
-**********************************************************/
-
+/* Main Style */
 body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: #333;
     background-image: url('../img/background.jpg');
-    background-color:#051769;
+    background-color: var(--dark-grey);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: top;
     background-size: 100%;
-
 }
 
-
-/*********************************************************
-*             Presentacion del sitio web                 *
-**********************************************************/
-.my-description{
-    text-align: center;
-    padding: 15px;
-    width: 30vw;
-}
-
-.my-description h2 {
-    margin-bottom: .7em;
-    font-family: 'Oswald', sans-serif;
-    color: var(--blanco);
-    font-size: 4em;
-}
-
-.my-description p {
-    text-align: justify;
-    font-family:'Oswald', sans-serif;
-    color: #fff;
-    font-size: 25px;
-}
-
-/*********************************************************
-*             Presentacion - boton "Leer Mas"            *
-**********************************************************/
-
-.my-description .presentacion_btn_info {
-    margin-top: 3em;
-    margin-left: 0px;
-    padding: 10px;
-    width: 14vw;
-    text-align: center;
-    border-radius: 5px;
-    font-family: 'Oswald',sans-serif;
-    font-size: 1.4em;
-    color: var(--blanco);
-    border-radius: .4em;
-    background: var(--degradado-naranja-fondo);
-    background: var(--degradado-naranja);
-    cursor: pointer;
+a {
     text-decoration: none;
+    color: inherit;
 }
 
-.presentacion_btn_info:hover {
-    background: #eb461d;
-    transition-property: background;
-    transition-duration: .5s;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-.presentacion_btn_info:active {
-    background: #ff613a;
-}   
+/* Layout */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-
-/*********************************************************
-*                       Presentation                     *
-**********************************************************/
-
-.start{
-    color:#fff;
-    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
-    url(../img/fondo.jpg);
-    background-size: cover;
-    height: 100vh;
-    align-content: space-between;
-    color: #fff;
+.flex {
     display: flex;
-    flex-direction: row-reverse;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
     align-items: center;
 }
-.start .banner-container{
-    width: 100%;
-    padding: 20px;
-    background-color: #1e2326f8;/*#1e2326*/
-    max-width: 360px;
-    margin: auto;
-    /*margin-left: 50%;*/
-    text-align: center;
-    border-radius: 40px;
+
+.justify-between {
+    justify-content: space-between;
 }
-.start .banner-container img{
-    margin-top: 40px;
-    border: 10px solid var(--verde);
-    display: block;
-    width: 80%;
-    margin: auto;
-    border-radius: 100%;
+
+.grid {
+    display: grid;
 }
-.start .banner-container h1{
-    margin-top: 40px;
-    font-size: 42px;
-    font-family: 'Righteous';
+
+.gap-4 {
+    gap: 1rem;
 }
-.start .banner-container h2{
-    font-size: 15px;
-    font-weight: normal;
+
+.gap-6 {
+    gap: 1.5rem;
 }
-.start .banner-container .social-media a{
-    color: #fff;
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* General style of Sections */
+section {
+    padding: 4rem 0;
+}
+
+.bg-muted {
+    background-color: var(--white-smoke);
+}
+
+h1,
+h2 {
+    margin-bottom: 1rem;
+}
+
+.btn {
     display: inline-block;
-    text-decoration: none;
-    border: 1px solid #fff;
-    border-radius: 100%;
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
-    margin: 40px 5px;
-    font-size: 20px;
-    transition: .3s;
-}
-.start .banner-container .social-media a:hover{
-    background-color: var(--verde);
+    padding: 0.5rem 1rem;
+    background-color: var(--dark-ruby);
+    color: var(--white);
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
+.btn:hover {
+    background-color: var(--cardinal-ruby);
+}
 
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--dark-ruby);
+    color: var(--dark-ruby);
+}
 
-
-
-
-
-
-
-
-
-
-
-/*
-    Se requiere modificacion para arreglar los errores de
-    desing de el menu en la resolucion ( 1200px )
-    fecha: 16 de octubre del 2023. 
-*/
-
+.btn-outline:hover {
+    background-color: var(--cardinal-ruby);
+    color: var(--white);
+}

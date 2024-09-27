@@ -1,60 +1,93 @@
+/* Header */
+
 header {
-    width: 100%;
-    background: #033b11a9;
-    color:#fff;
+    position: absolute;
+    top: 5px;
+    background-color: var(--white);
+    color: var(--dark-grey);
+    border-radius: 5px;
+    width: 99%;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
 }
 
-header nav {
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
     display: flex;
-    width:100%;
-    align-items: center; /* Centrar contenido en el eje secundario */
+    align-items: center;
+    gap: 1.5rem;
 }
 
-header nav div {
-    margin: 4px 10px;
-}
-
-/* Website name  */
-header nav .website-name h3{
-    color: #a52a2a;
-    font-weight: 600;
-    font-size: 1.8em;
-    font-family: 'Oswald', sans-serif;
-}
-
-header nav .navegation {
-    width: 100%;
-    margin-left:10rem;
-}
-
-header nav .navegation ul {
-    list-style: none;
-}
-
-header nav .navegation ul li {
-    display: inline-block;
-}
-
-
-header nav ul li a {
-    display: inline-block;
-    color:#fff;
-    padding: 15px 10px;
+nav a {
+    color: var(--dark-grey);
     text-decoration: none;
-    font-size: 1.2rem;
+    padding: 1rem .5rem;
+    text-align: center;
+    font-family: 'Roboto';
 }
 
-header nav ul li a:hover {
-    border-bottom: 3px solid #a52a2a;
+nav a:hover {
+    border-bottom: 2px solid var(--dark-ruby);
+    cursor: pointer;
 }
 
-
-
-/* Social media */
-header nav .social-media ul {
-    list-style: none;
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
-header nav .social-media ul li{
-    display: inline-block;
+.desktop-nav {
+    display: flex;
+    /* Muestra el menú en pantallas grandes */
+}
+
+.desktop-nav.active {
+    display: none;
+}
+
+.menu-button_close {
+    display: none;
+}
+
+/* Estilo para pantallas pequeñas */
+
+@media (max-width: 768px) {
+    header {
+        z-index: 200;
+        top: 0px;
+        padding: 20px;
+    }
+    .logo {
+        display: none !important;
+    }
+    .container a {
+        display: block;
+        align-self: flex-start;
+    }
+    .menu-button, .menu-button_close {
+        align-self: flex-start;
+        margin: 0px;
+    }
+    .desktop-nav {
+        display: none;
+        flex-direction: column;
+    }
+    .desktop-nav.active {
+        display: flex;
+    }
+    .menu-button {
+        display: block;
+    }
+    .container nav ul {
+        gap: 0;
+    }
 }
