@@ -3,7 +3,26 @@ from routes import admin_panel
 from markupsafe import escape
 import requests
 
+
+### Send email
+from flask_mail import Mail
+from flask_mail import Message
+
+
+### COnfiguraciones de EMail
+
+
+
 app = Flask(__name__)
+
+
+
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USERNAME'] = 'moises.p.student@gmail.com'
+app.config['MAIL_PASSWORD'] = 'qyfw evcq fxwg eqpw' 
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
 
 app.register_blueprint(admin_panel.AdminPanel)
 
@@ -39,15 +58,39 @@ def download():
 ### Formulario de contacto
 @app.route('/contact', methods=['POST'])
 def contact():
-    name = escape(request.form['name'])
-    phone_number = escape(request.form['phone_number'])
-    client_email = escape(request.form['client_email'])
-    sms = escape(request.form['sms'])
-    return f'Hola: {name}, {phone_number}, {client_email}, {sms}'
+
+    if request.method == 'POST':
+
+        name = escape(request.form['name'])
+        email_adress = escape(request.form['email'])
+        email = escape(request.form['message'])
+
+        send_email(name_client=name, message=email, adress=email_adress)
+        
+        return redirect('homepage')
 
 
 
+def send_email(name_client, message, adress):
 
+    msg = Message(
+        subject='Nuevo mensaje enviado desde el portafolio web.',
+        sender='moises.p.student@gmail.com',
+        recipients=['moises.p.student@gmail.com'] ### Destino
+    )
+    
+    msg.body = 'Este es un mensaje enviado desde el webfolio.'
+    msg.html = f"<h3>Nombre: {name_client}<h3><br><h3>Direccion Email: {adress}</h3><br> <h3>Mensaje: {message}</h3>."
+
+    
+    try:
+        mail.send(msg)
+        return 'Correo enviado!'
+    except Exception as e:
+        return str(e)
+
+
+mail = Mail(app)
 
 
 

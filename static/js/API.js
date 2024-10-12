@@ -1,6 +1,6 @@
 /// Api fetch
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const portfolioSection = document.getElementById("portfolio-section");
 
   // Función para obtener datos del portafolio desde el backend Flask
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
       displayPortfolio(data);
     } catch (error) {
       console.error("Error al obtener los datos:", error);
-      portfolioSection.innerHTML = "<p>Error al cargar los proyectos.</p>"; // Mensaje de error en el DOM
+      portfolioSection.innerHTML = "<p id='portfolioError' >Error al cargar los proyectos.</p>"; // Mensaje de error en el DOM
     }
   }
 
@@ -39,60 +39,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 let projects = [];
-// Datos de los proyectos
-
-/*
- const projects = [{
-         id: 1,
-         title: "Proyecto Web 1",
-         category: "web",
-         image: "https://picsum.photos/id/1/300/200",
-         description: "Una aplicación web moderna y responsiva",
-         github: "https://github.com/user/proyecto-web-1"
-     },
-     {
-         id: 2,
-         title: "App Móvil 1",
-         category: "mobile",
-         image: "https://picsum.photos/id/2/300/200",
-         description: "Una app móvil innovadora para iOS y Android",
-         github: "https://github.com/user/app-movil-1"
-     },
-     {
-         id: 3,
-         title: "Software de Escritorio 1",
-         category: "desktop",
-         image: "https://picsum.photos/id/3/300/200",
-         description: "Una potente herramienta de productividad",
-         github: "https://github.com/user/software-escritorio-1"
-     },
-     {
-         id: 4,
-         title: "Proyecto Web 2",
-         category: "web",
-         image: "https://picsum.photos/id/4/300/200",
-         description: "Un sitio web de comercio electrónico",
-         github: "https://github.com/user/proyecto-web-2"
-     },
-     {
-         id: 5,
-         title: "App Móvil 2",
-         category: "mobile",
-         image: "https://picsum.photos/id/5/300/200",
-         description: "Una app de fitness y salud",
-         github: "https://github.com/user/app-movil-2"
-     },
-     {
-         id: 6,
-         title: "Software de Escritorio 2",
-         category: "desktop",
-         image: "https://picsum.photos/id/6/300/200",
-         description: "Un editor de video avanzado",
-         github: "https://github.com/user/software-escritorio-2"
-     },
-
- ];
- */
 
 const itemsPerPage = 6;
 let currentPage = 1;
@@ -124,9 +70,9 @@ function renderProjects(projects) {
 
 function filterProjects() {
   const filteredProjects =
-    currentCategory === "all"
-      ? projects
-      : projects.filter(project => project.category === currentCategory);
+    currentCategory === "all" ?
+    projects :
+    projects.filter(project => project.category === currentCategory);
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
